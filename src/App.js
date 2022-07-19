@@ -17,6 +17,7 @@ function App() {
   let appSections =["home", "services", "features", "team", "contact"]
   let addtime = 0;// increase number of scroll that needed to change the page
   document.onwheel =(e)=>{
+    if(addtime > 3 || addtime < -3) addtime = 0;
     var currentSection = document.querySelector(".menu ul a[class = active]").innerText.toLowerCase();
     if (window.scrollY + window.innerHeight + addtime  >= document.body.scrollHeight +3){//for scroll up
       for(var i = 0; i < appSections.length; i++){
