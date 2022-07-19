@@ -1,0 +1,198 @@
+@import "./variables";
+
+.feat-container{
+    text-align: center;
+    background-color: #{$bgColor};
+    color: white;
+    padding: 10vh 8vw;
+    opacity: 0;
+    transition: 2s;
+    overflow: hidden;
+    >h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .types{
+        width:70vw;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 10vh auto;
+        position: relative;
+        div{
+            width: 109px;
+            position: relative;
+            cursor: pointer;
+            svg{
+                display: block;
+            }
+            p{
+                text-transform: uppercase;
+                margin: 0;
+                position: absolute;
+                top: -5px;
+                left: 25px;
+            }
+            &::after{
+                content: "";
+                width: 159px;
+                height: 5px;
+                background-color: white;
+                position: absolute;
+                bottom: -10px;
+                left: -25px;
+            }
+            &:hover{
+                color: #{$mainColor};
+                &::after{
+                    background-color: #{$mainColor};
+                }
+            }
+        }
+        .active{
+            color: #{$mainColor};
+            &::after{
+                background-color: #{$mainColor};
+            }
+        }
+    }
+    @media (max-width:570px) {
+        padding: 10vh 0;
+        .types{
+            margin: 10vh 35px;
+            div::after{
+                width: 190%;
+                left: -5px;
+            }
+        }
+    }
+    .svg-style{
+        font-size: 30px;
+        background-color: #{$mainColor};
+        color: white;
+        padding: 20px;
+        border-radius: 50%;
+    }
+    p{
+        font-size: 15px;
+    }
+    h3{
+        margin: 0;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    h4{
+        font-size: 25px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    .configuring{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 33.3%;
+        row-gap: 50px;
+        .feature{
+            display: flex;
+            .text{
+                font-weight: 400;
+                p{
+                    font-weight: 400;
+                    font-family: 'Roboto Condensed', sans-serif;
+                }
+            }
+        }
+        @for $i from 0 through 7 {
+            @if $i%2 != 0 {
+                .feature#{$i}{
+                    flex-direction: row;
+                    .text{
+                        text-align: left;
+                        padding-left:15px ;
+                    }
+                }
+            }@else{
+                .feature#{$i}{
+                    flex-direction: row-reverse;
+                    .text{
+                        text-align: right;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 850px) {
+        .configuring{
+            display: block;
+            padding: 0 20px;
+            .feature{
+                display: block;
+                .text{
+                    text-align: center;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    .tracking{
+        display: flex;
+        gap: 50px;
+        img{
+            height: 80vh;
+        }
+        .text1{
+            text-align: left;
+        }
+        .features{
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 10%;
+            row-gap: 5%;
+            .feature{
+                .text2{
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        .tracking{
+            display: block;
+            padding: 0 20px;
+            img{
+                height: 50vh;
+            }
+        }
+    }
+    .monitoring{
+        text-align: left;
+        .features{
+            display: grid;
+            grid-template-columns: 30% 30%;
+            column-gap: 10%;
+            row-gap: 5%;
+            margin-bottom: 20px;
+            .feature{
+                .text2{
+                    padding-left: 15px;
+                }
+            }
+        }
+        h3{
+            font-size: 30px;
+        }
+        p{
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 850px) {
+        .monitoring{ 
+            padding: 0 20px;
+            .features{
+                grid-template-columns: auto auto;
+            }
+        }
+    }
+    }

@@ -1,0 +1,75 @@
+@import "./variables";
+
+.main-bar{
+    color: whitesmoke;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 10vw;
+    z-index: 5;
+    .logo{
+        font-size: 50px;
+    }
+    .menu{
+        ul{
+            font-size: 20px;
+            list-style: none;
+            padding: 0;
+            width: fit-content;
+            display: inline;
+            a{
+                text-decoration: none;
+                color: white;
+                height: 50px;
+                position: relative;
+                display: inline;
+                margin: 0 10px;
+                cursor: pointer;
+                span{
+                    width: 0;
+                    height: 2px;
+                    background-color: #{$mainColor};
+                    transition: 0.6s;
+                    position: absolute;
+                    bottom: -4px;
+                    left: -2px;
+                }
+            }
+            .active{
+                color: #{$mainColor};
+            }
+        }
+        .search{
+            cursor: pointer;
+            font-size:25px;
+            margin-left: 10px;
+        }
+    }
+    .menu[style="display: block;"]{
+        position: absolute;
+        right:20px;
+        top:65px;
+        padding: 20px 5vw;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        ul a{
+            display: block;
+            &:not([class="active"]){
+                color: black;
+            }
+            span{
+                bottom: 15px;
+            }
+        }
+    }
+    .bars{
+        display: none;
+        font-size:25px;
+        &:hover{
+            color: #{$mainColor};
+        }
+    }
+}

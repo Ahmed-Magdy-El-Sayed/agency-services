@@ -1,0 +1,109 @@
+@import "./_variables.scss";
+.team-container{
+    padding-top: 10vh;
+    overflow: hidden;
+    height: 120vh;
+    opacity: 0;
+    transition: 2s;
+    .team{
+        display: flex;
+        gap: 20px;
+        width: fit-content;
+        padding: 0 100px;
+        perspective: 5000px;
+        position: relative;
+        top:5vh;
+        transition: 1s;
+        .team-memper{
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 0px 50px -5px grey;
+            padding: 3vh 3vw;
+            transition: 1s;
+            .rate{
+                .colored{
+                    color: #{$mainColor};
+                }
+            }
+            h3{
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            >p{
+                height: 100px;
+                margin: 10px 0;
+                overflow-y: auto;
+            }
+            .user{
+                display: flex;
+                gap: 30px;
+                margin-top: -14px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .next, .prev{
+        font-size: 50px;
+        position: absolute;
+        cursor: pointer;
+        padding: 10px 22.5px;
+        border-radius: 50%;
+        color: white;
+        background-color: #{$mainColor};
+        z-index: 1;
+        top: calc(35% - 10px);
+    }
+    .next{
+        right: 15px;   
+    }
+    .prev{
+        left: 0;
+    }
+    @media (max-width:745px) {
+        .team{
+            position: unset;
+            margin: auto;
+            padding:0;
+            .team-memper:not([class~="center"]){
+                display: none;
+            }
+        }
+        .next,.prev{
+            opacity: 0.5;
+        }
+    }
+    .join-us{
+        background-image: url("../images/parallax4.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        margin-top: 20vh;
+        height: 52vh;
+        text-align: center;
+        color: white;
+        p{
+            padding-top: 100px;
+            margin: 0;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 400;
+        }
+        button{
+            background-color: #00c9db;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 20px;
+            cursor: pointer;
+            &:hover{
+                background-color: transparent;
+                border: 3px solid #{$mainColor};
+            }
+        }
+    }
+}
