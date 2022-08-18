@@ -39,7 +39,7 @@ export default function MainBar() {
         }
         for(let i = 0; i < sectionsName.length; i++){
             if(document.querySelector("#root").lastChild.className === sectionsName[i]){
-                document.querySelector(".menu ul a[data-name = "+sectionsName[i]+"]").classList = "active";
+                document.querySelector(".menu ul a[data-name = " + sectionsName[i] + "]").classList = "active";
             }
         }
         
