@@ -60,7 +60,11 @@ export default function Team(){
         var centerFound = false; //to knowe if loop reach to the centered card 
         var team = document.querySelector(".team-container .team");
         
+<<<<<<< HEAD
         if(changePosition || centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2){
+=======
+        if(changePosition || centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2 ){
+>>>>>>> 8c2da6d67c9c8e488f6ac031be2b0e69f0333b4d
             team.style.left = 
             "-"+(centerCard.getBoundingClientRect().x+ Math.abs(team.getBoundingClientRect().x)- 
             (window.innerWidth/2-200)) +"px";
