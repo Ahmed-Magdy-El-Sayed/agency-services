@@ -59,8 +59,8 @@ export default function Team(){
         var centerCard = document.querySelector(".team-container .team .center");
         var centerFound = false; //to knowe if loop reach to the centered card 
         var team = document.querySelector(".team-container .team");
-        
-        if(changePosition || centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2){
+        console.log(centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2);
+        if(changePosition || centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2 ){
             team.style.left = 
             "-"+(centerCard.getBoundingClientRect().x+ Math.abs(team.getBoundingClientRect().x)- 
             (window.innerWidth/2-200)) +"px";
