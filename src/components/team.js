@@ -7,8 +7,6 @@ import user3 from "../images/user-3.jpg";
 import user4 from "../images/user-4.jpg";
 import { useEffect, useState } from "react";
 
-let changePosition = true ; // to change .team element only when resize window
-
 export default function Team(){
     let data=[
         {h3:"Amazing App",img:user1,class:""},
@@ -27,9 +25,9 @@ export default function Team(){
         center.classList.remove("center");
         if(center.previousElementSibling){
             center.previousElementSibling.classList.add("center");
-            center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
-        }else
+        }else{
             document.querySelector(".team-container .team .team-memper:last-child").classList.add("center");
+        }
         update(!trager);
     }
     
@@ -38,31 +36,34 @@ export default function Team(){
         center.classList.remove("center");
         if(center.nextElementSibling){
             center.nextElementSibling.classList.add("center");
-            center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
-        }else
+        }else{
             document.querySelector(".team-container .team .team-memper:first-child").className += " center";
+        }
         update(!trager);
     }
     
-    //the next part for make the crads be rotated .getBoundingClientRect().x
-
+    //the next part for make the crads be rotated
     window.onresize=()=>{
-        changePosition = true;
         update(!trager);
     }
     useEffect(()=>{
         var cards = document.querySelectorAll(".team-container .team .team-memper");
         var centerCard = document.querySelector(".team-container .team .center");
         var centerFound = false; //to knowe if loop reach to the centered card 
-        var team = document.querySelector(".team-container .team");
+        var cardsContainer = document.querySelector(".team-container .team");
+        //form line 55 to 63 --> to make centerCard at the center of the page
         
-        if(changePosition || centerCard.getBoundingClientRect().x + centerCard.offsetWidth/2 > window.innerWidth/2 ){
-            team.style.left = 
-            "-"+(centerCard.getBoundingClientRect().x+ Math.abs(team.getBoundingClientRect().x)- 
-            (window.innerWidth/2-200)) +"px";
-            changePosition = false;
-        }
-        setTimeout(() => {
+        cardsContainer.style.left = 
+            cardsContainer.getBoundingClientRect().x < 0 ?
+                (- ( centerCard.getBoundingClientRect().x
+                + Math.abs(cardsContainer.getBoundingClientRect().x)
+                )) + window.innerWidth/2 - centerCard.offsetWidth/2+"px" 
+            :   (- ( centerCard.getBoundingClientRect().x
+                - cardsContainer.getBoundingClientRect().x
+                )) + window.innerWidth/2 - centerCard.offsetWidth/2 +"px" 
+            ;
+        
+                setTimeout(() => {
             document.querySelector(".team-container").style.opacity=1;
             for(var i = 0;i < cards.length; i++){
                 //for cards before center card
@@ -89,7 +90,7 @@ export default function Team(){
     return(
         <section className="team-container">
             <FontAwesomeIcon className="next" onClick={next} icon="fa-solid fa-angle-right"/>
-            <div className="team">
+            <div className="team" >
                 {data.map((obj,i)=><div className={"team-memper"+" "+obj.class} key={i}>
                     <h3>{obj.h3}</h3>
                     <div className="rate">
