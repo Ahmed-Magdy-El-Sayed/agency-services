@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e5f6c5ae.css",
+    "main.js": "./static/js/main.f9c22cc2.js",
+    "static/media/laptop3.png": "./static/media/laptop3.68944a1339d841a645d5.png",
+    "static/media/features.png": "./static/media/features.482ad0086b22f80f4cae.png",
+    "static/media/landing-page.jpg": "./static/media/landing-page.64df6f405733aee1fe05.jpg",
+    "static/media/laptop2.png": "./static/media/laptop2.8d0d46539a15b2652070.png",
+    "static/media/parallax4.jpg": "./static/media/parallax4.2a9f04383ad23da5e769.jpg",
+    "static/media/laptop1.png": "./static/media/laptop1.ac5347748001f73e1c07.png",
+    "static/media/appstore-apple.svg": "./static/media/appstore-apple.ed530397599930b4c1043b35178af161.svg",
+    "static/media/appstore-android.svg": "./static/media/appstore-android.970117b50dbcd82c9131f74b18c2ea82.svg",
+    "index.html": "./index.html",
+    "main.e5f6c5ae.css.map": "./static/css/main.e5f6c5ae.css.map",
+    "main.f9c22cc2.js.map": "./static/js/main.f9c22cc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5f6c5ae.css",
+    "static/js/main.f9c22cc2.js"
+  ]
+}
