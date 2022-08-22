@@ -27,7 +27,8 @@ export default function Team(){
         center.classList.remove("center");
         if(center.previousElementSibling){
             center.previousElementSibling.classList.add("center");
-            center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
+            if(center.parentElement.firstChild !== center)
+                center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
         }else{
             document.querySelector(".team-container .team .team-memper:last-child").classList.add("center");
             center.parentElement.style.left = "-2200px";
@@ -39,8 +40,9 @@ export default function Team(){
         var center = document.querySelector(".team-container .team .center");
         center.classList.remove("center");
         if(center.nextElementSibling){
-        center.nextElementSibling.classList.add("center");
-        center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
+            center.nextElementSibling.classList.add("center");
+            if(center.parentElement.lastChild !== center)
+                center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
         }else{
             document.querySelector(".team-container .team .team-memper:first-child").className += " center";
             center.parentElement.style.left = "200px";
