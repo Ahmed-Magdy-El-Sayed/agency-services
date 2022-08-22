@@ -27,6 +27,7 @@ export default function Team(){
         center.classList.remove("center");
         if(center.previousElementSibling){
             center.previousElementSibling.classList.add("center");
+            console.log(center.parentElement.firstChild !== center);
             if(center.parentElement.firstChild !== center)
                 center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
         }else{
@@ -41,6 +42,7 @@ export default function Team(){
         center.classList.remove("center");
         if(center.nextElementSibling){
             center.nextElementSibling.classList.add("center");
+            console.log(center.parentElement.lastChild !== center);
             if(center.parentElement.lastChild !== center)
                 center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
         }else{
