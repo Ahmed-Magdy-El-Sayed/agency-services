@@ -27,13 +27,9 @@ export default function Team(){
         center.classList.remove("center");
         if(center.previousElementSibling){
             center.previousElementSibling.classList.add("center");
-            console.log(center.parentElement.firstChild !== center);
-            if(center.parentElement.firstChild !== center)
-                center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
-        }else{
+            center.parentElement.style.left = parseInt( center.parentElement.style.left )+410+"px";
+        }else
             document.querySelector(".team-container .team .team-memper:last-child").classList.add("center");
-            center.parentElement.style.left = "-2200px";
-        }
         update(!trager);
     }
     
@@ -42,13 +38,9 @@ export default function Team(){
         center.classList.remove("center");
         if(center.nextElementSibling){
             center.nextElementSibling.classList.add("center");
-            console.log(center.parentElement.lastChild !== center);
-            if(center.parentElement.lastChild !== center)
-                center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
-        }else{
+            center.parentElement.style.left = parseInt( center.parentElement.style.left )-410+"px";
+        }else
             document.querySelector(".team-container .team .team-memper:first-child").className += " center";
-            center.parentElement.style.left = "200px";
-        }
         update(!trager);
     }
     
