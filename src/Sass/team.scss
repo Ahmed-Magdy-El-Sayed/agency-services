@@ -13,13 +13,13 @@
         perspective: 5000px;
         position: relative;
         top:5vh;
-        transition: 1s;
+        transition: 0.6s linear;
         .team-memper{
             width: 400px;
             height: 300px;
             box-shadow: 0px 0px 50px -5px grey;
             padding: 3vh 3vw;
-            transition: 1s;
+            transition: 0.6s linear;
             .rate{
                 .colored{
                     color: #{$mainColor};
