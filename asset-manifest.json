@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.e5f6c5ae.css",
+    "main.css": "./static/css/main.ac6f50c7.css",
     "main.js": "./static/js/main.f146c9f1.js",
     "static/media/laptop3.png": "./static/media/laptop3.68944a1339d841a645d5.png",
     "static/media/features.png": "./static/media/features.482ad0086b22f80f4cae.png",
@@ -11,11 +11,11 @@
     "static/media/appstore-apple.svg": "./static/media/appstore-apple.ed530397599930b4c1043b35178af161.svg",
     "static/media/appstore-android.svg": "./static/media/appstore-android.970117b50dbcd82c9131f74b18c2ea82.svg",
     "index.html": "./index.html",
-    "main.e5f6c5ae.css.map": "./static/css/main.e5f6c5ae.css.map",
+    "main.ac6f50c7.css.map": "./static/css/main.ac6f50c7.css.map",
     "main.f146c9f1.js.map": "./static/js/main.f146c9f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5f6c5ae.css",
+    "static/css/main.ac6f50c7.css",
     "static/js/main.f146c9f1.js"
   ]
 }
