@@ -56,6 +56,26 @@ export default function Team(){
         //form line 55 to 63 --> to make centerCard at the center of the page
 
         document.querySelector(".team-container").style.opacity=1;
+
+        for(var i = 0;i < cards.length; i++){
+            //for cards before center card
+            if(cards[i]!=centerCard && !centerFound){
+                cards[i].style = null;
+                cards[i].style.transform="rotateY(30deg) scale(0.8)";
+                cards[i].style.transformOrigin= "right center";
+            }
+            //for cards after center card
+            else if(cards[i]!=centerCard && centerFound){
+                cards[i].style = null;
+                cards[i].style.transform="rotateY(-30deg) scale(0.8)";
+                cards[i].style.transformOrigin= "left center";
+            }
+            //when reach to center card
+            else{
+                cards[i].style = null;
+                centerFound=true;
+            }
+        }
         
         if(intervalRunning) {
             clearInterval(centeringCard);
