@@ -54,6 +54,8 @@ export default function Team(){
         var centerFound = false; //to knowe if loop reach to the centered card 
         var cardsContainer = document.querySelector(".team-container .team");
         //form line 55 to 63 --> to make centerCard at the center of the page
+
+        document.querySelector(".team-container").style.opacity=1;
         
         if(intervalRunning) {
             clearInterval(centeringCard);
