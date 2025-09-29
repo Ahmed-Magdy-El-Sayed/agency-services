@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.ce9d7439.css",
-    "main.js": "./static/js/main.72dea9c6.js",
+    "main.js": "./static/js/main.4da75689.js",
     "static/media/laptop3.png": "./static/media/laptop3.68944a1339d841a645d5.png",
     "static/media/features.png": "./static/media/features.482ad0086b22f80f4cae.png",
     "static/media/landing-page.jpg": "./static/media/landing-page.64df6f405733aee1fe05.jpg",
@@ -12,10 +12,10 @@
     "static/media/appstore-android.svg": "./static/media/appstore-android.970117b50dbcd82c9131f74b18c2ea82.svg",
     "index.html": "./index.html",
     "main.ce9d7439.css.map": "./static/css/main.ce9d7439.css.map",
-    "main.72dea9c6.js.map": "./static/js/main.72dea9c6.js.map"
+    "main.4da75689.js.map": "./static/js/main.4da75689.js.map"
   },
   "entrypoints": [
     "static/css/main.ce9d7439.css",
-    "static/js/main.72dea9c6.js"
+    "static/js/main.4da75689.js"
   ]
 }
