@@ -1,15 +1,19 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "../Sass/contact.scss"
 import img1 from "../images/appstore-android.svg"
 import img2 from "../images/appstore-apple.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useRef } from "react";
 
-
-export default function(){
-    setTimeout(() => {
-        (()=>document.querySelector(".contact-us").style.opacity=1)();
-    }, 100);
+const Contact: React.FC= ()=>{
+    const contactUsRef = useRef<HTMLElement | null>(null)
+    useEffect(()=>{
+        if(contactUsRef.current)
+            contactUsRef.current.style.opacity= "1";
+    })
+    
     return(
-        <section className="contact-us">
+        <section className="contact-us" ref={contactUsRef}>
             <div className="upper-part">
                 <div className="part">
                     <h4>Highlights</h4>
@@ -39,9 +43,9 @@ export default function(){
                 </div>
                 <div className="part">
                     <h4>Stay Connected</h4>
-                    <FontAwesomeIcon icon="fa-brands fa-instagram" />
-                    <FontAwesomeIcon icon="fa-brands fa-twitter" />
-                    <FontAwesomeIcon icon="fa-brands fa-facebook" />
+                    <FontAwesomeIcon icon={"fa-brands fa-instagram" as IconProp} />
+                    <FontAwesomeIcon icon={"fa-brands fa-twitter" as IconProp} />
+                    <FontAwesomeIcon icon={"fa-brands fa-facebook" as IconProp} />
                     <p>
                         Company Name<br/>
                         2419 Locust View Drive<br/>
@@ -64,3 +68,5 @@ export default function(){
         </section>
     );
 }
+
+export default Contact;
