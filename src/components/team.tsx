@@ -86,7 +86,7 @@ const Team: React.FC= ()=>{
     },[])
 
     return(
-        <section className="team-container" ref={containerRef}>
+        <div className="team-container" ref={containerRef}>
             <FontAwesomeIcon className="next" onClick={next} icon={"fa-solid fa-angle-right" as IconProp}/>
             <div className="team" ref={cardsRef}>
                 {reviews.map((obj: review,i: number)=>
@@ -128,7 +128,7 @@ const Team: React.FC= ()=>{
                 <h1>LOOKING FOR EXCLUSIVE DIGITAL SERVICES ?</h1>
                 <button type="button">learn more</button>
             </div>
-        </section>
+        </div>
     );
 }
 

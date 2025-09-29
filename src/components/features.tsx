@@ -141,7 +141,7 @@ const Features:React.FC= ()=>{
         if(featuresRef.current) featuresRef.current.style.opacity= "1";
     })
     return(
-        <section className="feat-container" ref={featuresRef}>
+        <div className="feat-container" ref={featuresRef}>
             <h3>features</h3>
             <p>Theme was designed based on input from personal development coaches<br/>
                 and popular trainers so it offers all
@@ -164,7 +164,7 @@ const Features:React.FC= ()=>{
             : activeTab === "tracking"? <Tracking/>
             : activeTab === "monitoring" && <Monitoring/>
             }
-        </section>
+        </div>
     );
 }
 

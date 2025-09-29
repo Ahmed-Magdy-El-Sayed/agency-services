@@ -26,7 +26,7 @@ const Services: React.FC = ()=>{
         }
     })
     return(
-        <section className="serv-container">
+        <div className="serv-container">
             <h3>Service</h3>
             <h1 ref={ref=>{contentRef.current.left = ref}}>
                 we design digital productes that<br/>help grow businesses.
@@ -47,7 +47,7 @@ const Services: React.FC = ()=>{
                 )}
                 
             </div>
-        </section>
+        </div>
     );
 }
 

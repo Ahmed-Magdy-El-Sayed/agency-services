@@ -13,7 +13,7 @@ const Contact: React.FC= ()=>{
     })
     
     return(
-        <section className="contact-us" ref={contactUsRef}>
+        <div className="contact-us" ref={contactUsRef}>
             <div className="upper-part">
                 <div className="part">
                     <h4>Highlights</h4>
@@ -65,7 +65,7 @@ const Contact: React.FC= ()=>{
                 <img src={img2}></img>
                 <p>&copy; {(new Date().getFullYear)()} | Made by <span>Ahmed Magdy</span>.</p>
             </div>
-        </section>
+        </div>
     );
 }
 
